@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>iPhone 铃声自己做</title>
+    <link rel="stylesheet" href="<%= stylesheet_path 'application' %>">
+  </head>
+  <body>
+    <div class="container">
+
+      <div class="page-header">
+        <h1>iPhone 铃声自己做</h1>
+      </div>
+
+      <div class="panel panel-default" id="choose-song">
+        <div class="panel-heading">选择歌曲</div>
+        <div class="panel-body">
+          <form action="/upload" method="post" enctype="multipart/form-data" id="form-upload">
+            <input type="file" accept="audio/*" class="form-control" name="song" id="song">
+          </form>
+          <div class="progress hidden" id="progress">
+            <div class="progress-bar progress-bar-striped active" role="progressbar" aria-valuemin="0" aria-valuemax="100" style="width: 0%;">正在上传...</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="panel panel-default hidden" id="set-range">
+        <div class="panel-heading">剪切</div>
+        <div class="panel-body">
+          <form action="/render" method="post" id="form-render">
+            <input type="hidden" name="filename" id="filename">
+            <input type="hidden" name="originName" id="originName">
+            <input type="text" name="range" id="range" data-slider-min="0" data-slider-max="60">
+            <div class="alert alert-danger hidden" role="alert" id="range-invalid">iPhone 铃声长度必须在 40 秒以内，请调整剪切时间</div>
+            <button type="submit" class="btn btn-primary form-control" id="submit">确定</button>
+          </form>
+        </div>
+      </div>
+
+      <footer>
+        &copy; 2014 <a href="//hyjk2000.github.io/">James Shih</a>.
+      </footer>
+
+    </div>
+
+    <script src="<%= javascript_path 'application' %>"></script>
+  </body>
+</html>
