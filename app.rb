@@ -47,7 +47,7 @@ class App < Sinatra::Base
     song = FFMPEG::Movie.new temp_file_path
     return 400 unless song.valid?
 
-    song.transcode ringtone_path, "-c:a aac -ss #{ss} -to #{to} -vn -sn -y"
+    song.transcode ringtone_path, "-strict experimental -c:a aac -b:a 160k -ss #{ss} -to #{to} -vn -sn -y"
 
     send_file ringtone_path, filename: "#{origin_name}.m4r", type: 'audio/MP4A-LATM'
   end
