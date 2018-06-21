@@ -6,19 +6,18 @@ GEM
       coffee-script-source
       execjs
     coffee-script-source (1.10.0)
-    daemons (1.2.3)
-    eventmachine (1.0.9.1)
-    execjs (2.6.0)
+    daemons (1.2.6)
+    eventmachine (1.2.7)
+    execjs (2.7.0)
     hike (1.2.3)
-    json (1.8.3)
-    multi_json (1.11.2)
-    puma (3.0.0)
-    rack (1.6.4)
-    rack-protection (1.5.3)
+    multi_json (1.13.1)
+    puma (3.11.4)
+    rack (1.6.10)
+    rack-protection (1.5.5)
       rack
     rake (10.5.0)
     sass (3.4.21)
-    sinatra (1.4.7)
+    sinatra (1.4.8)
       rack (~> 1.5)
       rack-protection (~> 1.4)
       tilt (>= 1.3, < 3)
@@ -30,7 +29,7 @@ GEM
       sprockets (~> 2.12)
       sprockets-helpers (~> 1.1)
       sprockets-sass (~> 1.2)
-    sprockets (2.12.4)
+    sprockets (2.12.5)
       hike (~> 1.2)
       multi_json (~> 1.0)
       rack (~> 1.0)
@@ -42,14 +41,13 @@ GEM
       tilt (~> 1.1)
     streamio-ffmpeg (2.0.0)
       multi_json (~> 1.8)
-    thin (1.6.4)
+    thin (1.7.2)
       daemons (~> 1.0, >= 1.0.9)
       eventmachine (~> 1.0, >= 1.0.4)
-      rack (~> 1.0)
+      rack (>= 1, < 3)
     tilt (1.4.1)
-    uglifier (2.7.2)
-      execjs (>= 0.3.0)
-      json (>= 1.8.0)
+    uglifier (4.1.12)
+      execjs (>= 0.3.0, < 3)
     whenever (0.9.4)
       chronic (>= 0.6.3)
 
@@ -67,4 +65,4 @@ DEPENDENCIES
   whenever
 
 BUNDLED WITH
-   1.11.2
+   1.16.2
