@@ -1,15 +1,15 @@
 source 'https://rubygems.org'
 ruby '2.5.1'
 
-gem 'sinatra'
-gem 'sinatra-asset-pipeline'
+gem 'sinatra', '>= 2.0.0'
+gem 'sinatra-asset-pipeline', '>= 2.0.0'
 gem 'uglifier'
 gem 'sass'
 gem 'streamio-ffmpeg'
 gem 'whenever', require: false
 
 group :development do
-  gem 'thin'
+  gem 'thin', '>= 1.7.2'
 end
 
 group :production do
